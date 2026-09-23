@@ -1,0 +1,23 @@
+.counter {
+  width: 400px;
+  margin: 10px auto;
+  background-color: rgb(84, 113, 129);
+  border-radius: 10px;
+}
+
+.counter p {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.counter button {
+  padding: 10px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
