@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Basic to advance in reactjs ",
+      "price": 20,
+      "in_stock": true
+    },
+
+    {
+      "id": 2,
+      "name": "Basic to advance in spring boot ",
+      "price": 200,
+      "in_stock": true
+    },
+
+    {
+      "id": 3,
+      "name": "Basic to advance in java ",
+      "price": 240,
+      "in_stock": false
+    },
+
+    {
+      "id": 4,
+      "name": "Basic to advance in html ",
+      "price": 920,
+      "in_stock": true
+    },
+    {
+      "id": 5,
+      "name": "Basic to advance in php ",
+      "price": 103,
+      "in_stock": false
+    }
+  ]
+}

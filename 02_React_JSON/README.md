@@ -1,16 +1,57 @@
-# React + Vite
+# npm JSON Server Setup for JSON Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### JSON Server Setup
 
-Currently, two official plugins are available:
+1. **Install JSON Server**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## npm install json-server
 
-## React Compiler
+Create db.json
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create a data folder inside the project and create a db.json file inside it.
 
-## Expanding the ESLint configuration
+Example project structure:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+└── data/
+└── db.json
+
+Add your JSON data inside the db.json file.
+
+# Start JSON Server
+
+Run the following command from the project root directory:
+
+# npx json-server src/data/db.json
+
+JSON Server will start on:
+
+http://localhost:3000
+
+Access the API
+
+If your db.json contains a products collection, you can access it using:
+
+http://localhost:3000/products
+
+JSON Server provides REST API endpoints for working with the JSON data.
+
+Example
+{
+"products": [
+{
+"id": "1",
+"name": "Laptop",
+"price": 50000
+},
+{
+"id": "2",
+"name": "Mobile",
+"price": 20000
+}
+]
+}
+
+API endpoint:
+
+http://localhost:3000/products
