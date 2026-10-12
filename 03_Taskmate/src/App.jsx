@@ -1,11 +1,19 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+import Header from "./components/Header";
+import AddTask from "./components/AddTask";
+import ShowTask from "./components/ShowTask";
+import Footer from "./components/Footer";
+
 import "./App.css";
 
 function App() {
-  return <h1>hello wordl </h1>;
+  return (
+    <div className="App">
+      <Header />
+      <AddTask />
+      <ShowTask />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
