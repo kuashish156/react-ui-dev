@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew Haven | Premium Coffee Shop</title>
+
+    <!-- Tailwind CSS Browser CDN (learning and prototyping) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      .brand {
+        font-family: "Playfair Display", serif;
+      }
+
+      .hero-bg {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(24, 15, 10, 0.88),
+            rgba(24, 15, 10, 0.28)
+          ),
+          url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2000&q=85");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .coffee-card {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .coffee-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 35px rgba(70, 45, 25, 0.12);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#fffaf3] text-[#302016]">
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-50 border-b border-[#eadfce] bg-[#fffaf3]/95 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10"
+      >
+        <a href="#home" class="brand text-2xl font-bold text-[#6f4026]">
+          ☕ Brew Haven
+        </a>
+
+        <div class="hidden items-center gap-8 text-sm font-semibold md:flex">
+          <a href="#home" class="transition hover:text-[#a66a3f]">Home</a>
+          <a href="#menu" class="transition hover:text-[#a66a3f]">Our Menu</a>
+          <a href="#about" class="transition hover:text-[#a66a3f]">About Us</a>
+          <a href="#reviews" class="transition hover:text-[#a66a3f]">Reviews</a>
+          <a href="#contact" class="transition hover:text-[#a66a3f]">Contact</a>
+        </div>
+
+        <a
+          href="#menu"
+          class="rounded-full bg-[#6f4026] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#4c2b1a]"
+        >
+          Order Coffee
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        id="home"
+        class="hero-bg flex min-h-[600px] items-center md:min-h-[680px]"
+      >
+        <div class="mx-auto w-full max-w-7xl px-5 py-20 md:px-10">
+          <div class="max-w-2xl text-white">
+            <p
+              class="mb-5 inline-block rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold tracking-wide"
+            >
+              ✦ YOUR DAILY DOSE OF HAPPINESS
+            </p>
+
+            <h1
+              class="mb-6 text-5xl font-bold leading-tight sm:text-6xl md:text-7xl"
+            >
+              Life begins after
+              <span class="text-[#e6b77e]">coffee.</span>
+            </h1>
+
+            <p
+              class="mb-9 max-w-xl text-base leading-8 text-white/80 md:text-lg"
+            >
+              Discover freshly roasted beans, handcrafted coffee, and a cozy
+              corner made for your best conversations and quiet moments.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#menu"
+                class="rounded-full bg-[#d7a36b] px-7 py-4 font-bold text-[#2b1a11] transition hover:bg-[#edc18e]"
+              >
+                Explore Our Menu →
+              </a>
+
+              <a
+                href="#about"
+                class="rounded-full border border-white/50 px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#302016]"
+              >
+                Our Story
+              </a>
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-8 text-sm">
+              <div>
+                <p class="text-2xl font-bold text-[#e6b77e]">100%</p>
+                <p class="mt-1 text-white/70">Quality Beans</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-[#e6b77e]">15+</p>
+                <p class="mt-1 text-white/70">Coffee Varieties</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-[#e6b77e]">4.9/5</p>
+                <p class="mt-1 text-white/70">Customer Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="border-b border-[#eadfce] bg-white">
+        <div
+          class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:grid-cols-3 md:px-10"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f5e7d5] text-2xl"
+            >
+              🌱
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Freshly Roasted</h3>
+              <p class="mt-1 text-sm text-[#826f60]">
+                Carefully selected coffee beans.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f5e7d5] text-2xl"
+            >
+              ☕
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Expertly Brewed</h3>
+              <p class="mt-1 text-sm text-[#826f60]">
+                Crafted with love in every cup.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f5e7d5] text-2xl"
+            >
+              🏡
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Cozy Atmosphere</h3>
+              <p class="mt-1 text-sm text-[#826f60]">
+                Your favorite place to unwind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU SECTION -->
+      <section id="menu" class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+        <div
+          class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"
+        >
+          <div>
+            <p
+              class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#a66a3f]"
+            >
+              Made for coffee lovers
+            </p>
+            <h2 class="text-4xl font-bold md:text-5xl">Our popular menu</h2>
+            <p class="mt-4 max-w-xl leading-7 text-[#826f60]">
+              From bold espresso to creamy lattes, find the perfect cup for your
+              mood.
+            </p>
+          </div>
+
+          <a href="#contact" class="font-bold text-[#8a512f] hover:underline">
+            Ask about our full menu →
+          </a>
+        </div>
+
+        <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Coffee 1 -->
+          <article
+            class="coffee-card overflow-hidden rounded-2xl border border-[#eadfce] bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80"
+              alt="Freshly prepared espresso coffee"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-5">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <h3 class="text-xl font-bold">Espresso</h3>
+                <span class="text-sm font-bold text-[#a66a3f]">₹120</span>
+              </div>
+              <p class="mb-4 text-sm leading-6 text-[#826f60]">
+                Rich, bold, and beautifully balanced.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block rounded-full bg-[#f5e7d5] px-4 py-2 text-sm font-bold text-[#6f4026] hover:bg-[#ead5bb]"
+              >
+                Order Now →
+              </a>
+            </div>
+          </article>
+
+          <!-- Coffee 2 -->
+          <article
+            class="coffee-card overflow-hidden rounded-2xl border border-[#eadfce] bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+              alt="Creamy cappuccino in a ceramic cup"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-5">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <h3 class="text-xl font-bold">Cappuccino</h3>
+                <span class="text-sm font-bold text-[#a66a3f]">₹180</span>
+              </div>
+              <p class="mb-4 text-sm leading-6 text-[#826f60]">
+                Smooth espresso topped with silky foam.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block rounded-full bg-[#f5e7d5] px-4 py-2 text-sm font-bold text-[#6f4026] hover:bg-[#ead5bb]"
+              >
+                Order Now →
+              </a>
+            </div>
+          </article>
+
+          <!-- Coffee 3 -->
+          <article
+            class="coffee-card overflow-hidden rounded-2xl border border-[#eadfce] bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+              alt="Latte with delicate milk foam"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-5">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <h3 class="text-xl font-bold">Cafe Latte</h3>
+                <span class="text-sm font-bold text-[#a66a3f]">₹200</span>
+              </div>
+              <p class="mb-4 text-sm leading-6 text-[#826f60]">
+                A comforting blend of espresso and steamed milk.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block rounded-full bg-[#f5e7d5] px-4 py-2 text-sm font-bold text-[#6f4026] hover:bg-[#ead5bb]"
+              >
+                Order Now →
+              </a>
+            </div>
+          </article>
+
+          <!-- Coffee 4 -->
+          <article
+            class="coffee-card overflow-hidden rounded-2xl border border-[#eadfce] bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80"
+              alt="Iced coffee served in a glass"
+              class="h-56 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-5">
+              <div class="mb-2 flex items-center justify-between gap-2">
+                <h3 class="text-xl font-bold">Iced Coffee</h3>
+                <span class="text-sm font-bold text-[#a66a3f]">₹190</span>
+              </div>
+              <p class="mb-4 text-sm leading-6 text-[#826f60]">
+                Chilled coffee for a refreshing little break.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block rounded-full bg-[#f5e7d5] px-4 py-2 text-sm font-bold text-[#6f4026] hover:bg-[#ead5bb]"
+              >
+                Order Now →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="bg-[#f2e7d8]">
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-10 md:py-24"
+        >
+          <div class="overflow-hidden rounded-3xl shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1100&q=85"
+              alt="Warm and welcoming coffee shop interior"
+              class="h-[420px] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div>
+            <p
+              class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#a66a3f]"
+            >
+              A little about us
+            </p>
+            <h2 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+              More than coffee.<br />
+              It's a feeling.
+            </h2>
+            <p class="mb-5 leading-8 text-[#705b4a]">
+              At Brew Haven, we believe a good cup of coffee can make an
+              ordinary day feel special. We bring together thoughtfully sourced
+              beans, passionate baristas, and a welcoming space.
+            </p>
+            <p class="mb-8 leading-8 text-[#705b4a]">
+              Whether you're meeting friends, working on your next big idea, or
+              simply taking a moment for yourself, there's always a seat waiting
+              for you.
+            </p>
+
+            <a
+              href="#contact"
+              class="inline-block rounded-full bg-[#6f4026] px-7 py-4 font-bold text-white transition hover:bg-[#4c2b1a]"
+            >
+              Visit Our Cafe →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section
+        id="reviews"
+        class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28"
+      >
+        <div class="mb-12 text-center">
+          <p
+            class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#a66a3f]"
+          >
+            Kind words
+          </p>
+          <h2 class="text-4xl font-bold md:text-5xl">Coffee made memorable</h2>
+          <p class="mt-4 text-[#826f60]">
+            A few words from our coffee-loving community.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-[#eadfce] bg-white p-7">
+            <p class="mb-4 tracking-widest text-[#c58a42]">★★★★★</p>
+            <p class="mb-6 leading-7 text-[#705b4a]">
+              "The cappuccino is fantastic, and the atmosphere is perfect for
+              catching up with friends."
+            </p>
+            <h3 class="font-bold">Priya S.</h3>
+            <p class="mt-1 text-sm text-[#9b8877]">Coffee enthusiast</p>
+          </article>
+
+          <article class="rounded-2xl border border-[#eadfce] bg-white p-7">
+            <p class="mb-4 tracking-widest text-[#c58a42]">★★★★★</p>
+            <p class="mb-6 leading-7 text-[#705b4a]">
+              "Great coffee, friendly staff, and a cozy place to get some work
+              done. The latte is my favorite."
+            </p>
+            <h3 class="font-bold">Rahul M.</h3>
+            <p class="mt-1 text-sm text-[#9b8877]">Regular customer</p>
+          </article>
+
+          <article class="rounded-2xl border border-[#eadfce] bg-white p-7">
+            <p class="mb-4 tracking-widest text-[#c58a42]">★★★★★</p>
+            <p class="mb-6 leading-7 text-[#705b4a]">
+              "A lovely little spot with delicious coffee. I always leave
+              feeling refreshed and happy."
+            </p>
+            <h3 class="font-bold">Ananya K.</h3>
+            <p class="mt-1 text-sm text-[#9b8877]">Happy customer</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="bg-[#302016] text-white">
+        <div
+          class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2 md:px-10 md:py-24"
+        >
+          <div>
+            <p
+              class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#e6b77e]"
+            >
+              Come say hello
+            </p>
+            <h2 class="mb-6 text-4xl font-bold md:text-5xl">
+              Your table is waiting.
+            </h2>
+            <p class="mb-8 max-w-lg leading-8 text-white/70">
+              Stop by for your favorite coffee, meet our team, or simply enjoy a
+              peaceful moment in your day.
+            </p>
+
+            <div class="space-y-5 text-white/85">
+              <p>📍 <strong>Address:</strong> Add your cafe address here</p>
+              <p>📞 <strong>Phone:</strong> +91 98765 43210</p>
+              <p>✉️ <strong>Email:</strong> hello@brewhaven.example</p>
+              <p>🕒 <strong>Hours:</strong> Monday–Sunday, 9:00 AM–9:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Contact form: visual demo only -->
+          <form
+            class="rounded-3xl bg-white p-7 text-[#302016] md:p-9"
+            onsubmit="
+              event.preventDefault();
+              alert(
+                'Thanks for reaching out! Connect this form to a backend to receive messages.',
+              );
+            "
+          >
+            <h3 class="mb-2 text-2xl font-bold">Send us a message</h3>
+            <p class="mb-6 text-sm text-[#826f60]">
+              Have a question? We'd love to hear from you.
+            </p>
+
+            <label for="name" class="mb-2 block text-sm font-semibold"
+              >Your name</label
+            >
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+              class="mb-5 w-full rounded-lg border border-[#e4d8c9] px-4 py-3 outline-none transition focus:border-[#a66a3f] focus:ring-2 focus:ring-[#a66a3f]/20"
+            />
+
+            <label for="email" class="mb-2 block text-sm font-semibold"
+              >Email address</label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+              class="mb-5 w-full rounded-lg border border-[#e4d8c9] px-4 py-3 outline-none transition focus:border-[#a66a3f] focus:ring-2 focus:ring-[#a66a3f]/20"
+            />
+
+            <label for="message" class="mb-2 block text-sm font-semibold"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message..."
+              required
+              class="mb-6 w-full resize-y rounded-lg border border-[#e4d8c9] px-4 py-3 outline-none transition focus:border-[#a66a3f] focus:ring-2 focus:ring-[#a66a3f]/20"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="w-full rounded-full bg-[#6f4026] px-6 py-4 font-bold text-white transition hover:bg-[#4c2b1a]"
+            >
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#21160f] text-white/70">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-7 text-center sm:flex-row md:px-10"
+      >
+        <a href="#home" class="brand text-xl font-bold text-[#e6b77e]">
+          ☕ Brew Haven
+        </a>
+
+        <p class="text-sm">
+          © <span id="year"></span> Brew Haven Coffee Shop. All rights reserved.
+        </p>
+
+        <a href="#home" class="text-sm transition hover:text-white">
+          Back to top ↑
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
