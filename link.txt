@@ -1,0 +1,7 @@
+ api keys- d8d3aa19650a44da228ac1448bc4b2e8 
+
+ api access tokan -  
+
+ eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkOGQzYWExOTY1MGE0NGRhMjI4YWMxNDQ4YmM0YjJlOCIsIm5iZiI6MTc5MzUzODY1NC45NTUwMDAyLCJzdWIiOiI2YWU3M2E1ZWUwZTIyOGM0NzljOGQwYzYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.1qjGYx2AEomiChXywKxCmJGRx_l7D7lgfNZyI3gXcfk
+
+fetch('https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1', options)
